@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2026_WpfApp2"
         mc:Ignorable="d"
-        Title="WPF飲料訂購ver1" Height="542" Width="1071">
+        Title="WPF飲料訂購ver2" Height="600" Width="900">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="638"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="內用/外帶">
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="Bisque" Height="20">
+                <RadioButton x:Name="RadioButton1" Content="內用" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"></RadioButton>
+                <RadioButton x:Name="RadioButton2" Content="外帶" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="紅茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider1" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider1}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="紅茶小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="40元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider2" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider2}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="綠茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider3" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider3}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="綠茶小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="40元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider4" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider4}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="可樂大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="50元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider5" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider5}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
+                <CheckBox Content="可樂小杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
+                <Label Content="30元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
+                <Slider x:Name="Slider6" Minimum="0" Maximum="20" Width="150" VerticalAlignment="Center" Margin="30,0,0,0" IsSnapToTickEnabled="True"></Slider>
+                <Label Content="{Binding Value, ElementName=Slider6}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="#FFF1F1B9" Grid.ColumnSpan="2" Width="880" Height="123"/>
+        <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" HorizontalAlignment="Left" Margin="62,62,46,129" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="78" FontSize="22"/>
     </Grid>
 </Window>
