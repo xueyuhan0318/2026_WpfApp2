@@ -21,32 +21,6 @@ namespace _2026_WpfApp2
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var targetTextBox = sender as TextBox;
-            var targetStackPanel = targetTextBox.Parent as StackPanel;
-            var targetName = targetStackPanel.Children[0] as Label;
-            var targetPriceLabel = targetStackPanel.Children[1] as Label;
-
-            int amount;
-            bool success = int.TryParse(targetTextBox.Text, out amount);
-            if (!success)
-            {
-                MessageBox.Show("請輸入正確數值", "輸入錯誤");
-                //targetTextBox.Text = "";
-            }
-            else
-            {
-                string drinkName = targetName.Content.ToString();
-                int price = Convert.ToInt32(targetPriceLabel.Content.ToString().Substring(0, 2));
-                //MessageBox.Show($"您選擇的飲料是 {drinkName}，數量為 {amount}，總價為 {price * amount} 元。", "訂單資訊");
-                ResultTextBlock.Text += $"您選擇的飲料是 {drinkName}，數量為 {amount}，總價為 {price * amount} 元。\n";
-            }
-        }
-
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Handle order button click event
-        }
+    
     }
 }
