@@ -22,7 +22,7 @@
                 <RadioButton x:Name="RadioButton2" Content="外帶" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Checked="RadioButton_Checked"></RadioButton>
             </StackPanel>
         </GroupBox>
-        <StackPanel Orientation="Vertical" Margin="0,42,221,155" Grid.RowSpan="2">
+        <StackPanel x:Name="DrinkItemsStackPanel" Orientation="Vertical" Margin="0,42,221,155" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
                 <CheckBox Content="紅茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
                 <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
@@ -60,7 +60,7 @@
                 <Label Content="{Binding Value, ElementName=Slider6}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
             </StackPanel>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="10,271,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF1F1B9" Width="606" Height="158" Grid.RowSpan="2"/>
+        <TextBlock x:Name="ResultTextBlock" HorizontalAlignment="Left" Margin="10,271,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF1F1B9" Width="606" Height="158" Grid.RowSpan="2" Padding="10,10,10,10" UseLayoutRounding="True"/>
         <Button x:Name="OrderButton" Content="訂購" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="78" FontSize="22" Margin="497,86,0,0" Click="OrderButton_Click"/>
     </Grid>
 </Window>
