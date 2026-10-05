@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2026_WpfApp2"
         mc:Ignorable="d"
-        Title="WPF飲料訂購ver2" Height="600" Width="900">
-    <Grid>
+        Title="WPF飲料訂購ver2" Height="493" Width="630">
+    <Grid Margin="0,0,2,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="400"/>
@@ -16,13 +16,13 @@
             <ColumnDefinition Width="638"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="內用/外帶">
-            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="Bisque" Height="20">
-                <RadioButton x:Name="RadioButton1" Content="內用" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"></RadioButton>
-                <RadioButton x:Name="RadioButton2" Content="外帶" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"></RadioButton>
+        <GroupBox Header="內用/外帶" Margin="0,0,222,0">
+            <StackPanel x:Name="DrinkMenuStackPanel" Orientation="Horizontal" Grid.ColumnSpan="2" Background="Bisque" Height="20" Margin="0,0,-1,0">
+                <RadioButton x:Name="RadioButton1" Content="內用" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Checked="RadioButton_Checked"></RadioButton>
+                <RadioButton x:Name="RadioButton2" Content="外帶" Margin="80,0,0,0" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Checked="RadioButton_Checked"></RadioButton>
             </StackPanel>
         </GroupBox>
-        <StackPanel Orientation="Vertical" Grid.Row="1">
+        <StackPanel Orientation="Vertical" Margin="0,42,221,155" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal" Height="36" Margin="5,2,5,2" Background="Beige">
                 <CheckBox Content="紅茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold" Foreground="Blue"></CheckBox>
                 <Label Content="60元" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" Foreground="Brown"></Label>
@@ -60,7 +60,7 @@
                 <Label Content="{Binding Value, ElementName=Slider6}" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="30" FontWeight="Bold"></Label>
             </StackPanel>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="#FFF1F1B9" Grid.ColumnSpan="2" Width="880" Height="123"/>
-        <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" HorizontalAlignment="Left" Margin="62,62,46,129" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="78" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,271,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF1F1B9" Width="606" Height="158" Grid.RowSpan="2"/>
+        <Button x:Name="OrderButton" Content="訂購" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="43" Width="78" FontSize="22" Margin="497,86,0,0" Click="OrderButton_Click"/>
     </Grid>
 </Window>
