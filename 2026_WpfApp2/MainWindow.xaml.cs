@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Text;
+using System.Windows;
 using System.Windows.Controls;
 using System.Linq;
 
@@ -26,6 +27,10 @@ namespace _2026_WpfApp2
         public MainWindow()
         {
             InitializeComponent();
+
+            //讀取飲料品項
+            AddDrinkItem(drinks);
+
         }
 
         private void OrderButton_Click(object sender, RoutedEventArgs e)
@@ -101,3 +106,6 @@ namespace _2026_WpfApp2
         }
     }
 }
+
+
+
